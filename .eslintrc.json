@@ -36,9 +36,11 @@
                     "**/*.spec.tsx",
                     "**/*.test.vue",
                     "**/*.spec.vue",
-                    "src/samples/**/*"
+                    "src/samples/**/*",
+                    "electron/**/*"
                 ]
             }
-        ]
+        ],
+        "curly": ["error", "multi"]
     }
 }

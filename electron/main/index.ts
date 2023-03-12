@@ -60,9 +60,7 @@ async function createWindow() {
     win.loadURL(devServerUrl);
     // Open devTool if the app is not packaged
     win.webContents.openDevTools();
-  } else {
-    win.loadFile(indexHtml);
-  }
+  } else win.loadFile(indexHtml);
 
   // Test actively push message to the Electron-Renderer
   win.webContents.on('did-finish-load', () => {
@@ -96,11 +94,8 @@ app.on('second-instance', () => {
 
 app.on('activate', () => {
   const allWindows = BrowserWindow.getAllWindows();
-  if (allWindows.length) {
-    allWindows[0].focus();
-  } else {
-    createWindow();
-  }
+  if (allWindows.length) allWindows[0].focus();
+  else createWindow();
 });
 
 // New window example arg: new windows url
@@ -113,9 +108,6 @@ ipcMain.handle('open-win', (_, arg) => {
     },
   });
 
-  if (process.env.VITE_DEV_SERVER_URL) {
-    childWindow.loadURL(`${devServerUrl}#${arg}`);
-  } else {
-    childWindow.loadFile(indexHtml, { hash: arg });
-  }
+  if (process.env.VITE_DEV_SERVER_URL) childWindow.loadURL(`${devServerUrl}#${arg}`);
+  else childWindow.loadFile(indexHtml, { hash: arg });
 });
