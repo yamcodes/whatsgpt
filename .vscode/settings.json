@@ -1,13 +1,29 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.tsc.autoDetect": "off",
-  "json.schemas": [
-    {
-      "fileMatch": [
-        "/*electron-builder.json5",
-        "/*electron-builder.json"
-      ],
-      "url": "https://json.schemastore.org/electron-builder"
-    }
-  ]
+  "json.schemas": [{
+    "fileMatch": [
+      "/*electron-builder.json5",
+      "/*electron-builder.json"
+    ],
+    "url": "https://json.schemastore.org/electron-builder"
+  }],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.classpath": false,
+    "**/.project": false,
+    "**/.*": false,
+    "**/.settings": false,
+    "**/node_modules": true,
+    "**/.factorypath": false,
+    "node_modules": true,
+    "**/dist-electron": true,
+    "dist-electron": true
+  },
+  "explorerExclude.backup": {}
 }
