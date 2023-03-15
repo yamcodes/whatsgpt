@@ -1,0 +1,12 @@
+name: Assign author to pull request
+on:
+  pull_request:
+    types: [opened]
+jobs:
+  assign:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Assign author as assignee
+        uses: devjpnobita/assign-pr-author@v1.1
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
