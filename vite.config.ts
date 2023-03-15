@@ -1,8 +1,10 @@
 import { rmSync } from 'node:fs';
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import electron from 'vite-plugin-electron';
 import renderer from 'vite-plugin-electron-renderer';
+import tsconfigPaths from 'vite-tsconfig-paths';
 import pkg from './package.json';
 
 // https://vitejs.dev/config/
@@ -61,11 +63,13 @@ export default defineConfig(({ command }) => {
             },
           },
         },
+
       ]),
       // Use Node.js API in the Renderer-process
       renderer({
         nodeIntegration: true,
       }),
+      tsconfigPaths(),
     ],
     server: process.env.VSCODE_DEBUG && (() => {
       const url = new URL(pkg.debug.env.VITE_DEV_SERVER_URL);
@@ -75,5 +79,9 @@ export default defineConfig(({ command }) => {
       };
     })(),
     clearScreen: false,
+    test: {
+      environment: 'happy-dom',
+      globals: true,
+    },
   };
 });
