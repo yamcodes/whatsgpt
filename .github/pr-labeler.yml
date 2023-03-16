@@ -5,5 +5,6 @@ docs: ["docs/*", "doc/*"]
 test: ["test/*", "tests/*"]
 perf: ["perf/*", "performance/*"]
 refactor: "refactor/*"
-chore: "chore/*"
+chore :hammer:: "chore/*"
 ci: "ci/*"
+project management: ["project-management/*", "project/*"]
