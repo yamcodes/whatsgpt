@@ -8,3 +8,4 @@ refactor: "refactor/*"
 chore :hammer:: "chore/*"
 ci: "ci/*"
 project management: ["project-management/*", "project/*"]
+
