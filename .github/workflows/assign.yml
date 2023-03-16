@@ -1,11 +1,18 @@
-name: AutoAssigner
-on: [pull_request]
+# .github/workflows/auto-author-assign.yml
+name: Auto Author Assign
+
+on:
+  issues:
+    types: [ opened, reopened ]
+  pull_request_target:
+    types: [ opened, reopened ]
+
+permissions:
+  issues: write
+  pull-requests: write
 
 jobs:
-  assignAuthor:
+  assign-author:
     runs-on: ubuntu-latest
     steps:
-      - uses: samspills/assign-pr-to-author@v1.0
-        if: github.event_name == 'pull_request' && github.event.action == 'opened'
-        with:
-          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+      - uses: toshimaru/auto-author-assign@v1.6.2
