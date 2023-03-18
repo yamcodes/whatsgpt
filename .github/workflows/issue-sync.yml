@@ -1,9 +1,9 @@
 name: Project Issue State Sync
 
 on: 
-  workflow_dispatch:
-    # At minute 0 every 2 hours
-    - cron: 0 0-23/2 * * *
+  # Run this workflow every 2 hours
+  schedule:
+    - cron: '0 */2 * * *'
 
 jobs:
   issue-state-sync:
