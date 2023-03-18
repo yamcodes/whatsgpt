@@ -4,6 +4,8 @@ on:
   # Run this workflow every 2 hours
   schedule:
     - cron: '0 */2 * * *'
+  # Add a manual trigger
+  workflow_dispatch:
 
 jobs:
   issue-state-sync:
