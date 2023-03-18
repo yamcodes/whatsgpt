@@ -1,8 +1,4 @@
-<!-- Standard PR template -->
-
-<!-- Strong suggestion: Given branch titled `username/type/some-description`, the title for this PR should be `Some Description` -->
-
-## What does this PR do?
+<!--- Please fill in the answer to "What does this PR do?" above. -->
 
 ## Why is this change being made?
 
