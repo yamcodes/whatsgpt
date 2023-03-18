@@ -1,4 +1,7 @@
-<!--- Please fill in the answer to "What does this PR do?" above. -->
+
+
+<!--- Please fill in the answer to "What does this PR do?" above.
+      If it closes an open issue, please write "Closes #<issue number>"
 
 ## Why is this change being made?
 
