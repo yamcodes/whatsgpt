@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Sync issue states
-        uses: dasmerlon/project-issue-state-sync@v1
+        uses: dasmerlon/project-issue-state-sync@v1.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           owner: yamyam263
