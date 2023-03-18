@@ -1,0 +1,29 @@
+name: Auto approve
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - synchronize
+  issue_comment:
+    types:
+      - created
+
+jobs:
+  auto-approve:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Check for LGTM comment
+        if: github.event_name == 'issue_comment' && github.event.comment.body == 'LGTM' && github.event.comment.author_association == 'OWNER'
+        uses: actions/github-script@v5
+        with:
+          script: |
+            const prNumber = context.issue.number
+            const repo = context.repo
+            await github.rest.pulls.createReview({ ...repo, pull_number: prNumber, event: 'APPROVE' })
+
+      - name: Auto approve for Dependabot
+        if: github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target'
+        uses: hmarr/auto-approve-action@v3

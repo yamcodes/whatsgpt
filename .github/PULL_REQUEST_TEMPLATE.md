@@ -1,12 +1,25 @@
-<!-- Thank you for contributing! -->
+<!-- Standard PR template -->
 
-### Description
+**Suggested PR Title:** `<Branch Name>` (please convert branch name to title case)
 
-<!-- Please insert your description here and provide especially info about the "what" this PR is solving -->
+## What does this PR do?
 
-### What is the purpose of this pull request? <!-- (put an "X" next to an item) -->
+## Why is this change being made?
 
-- [ ] Bug fix
-- [ ] New Feature
-- [ ] Documentation update
-- [ ] Other
+## How does this PR do it?
+
+## How was this tested? How can the reviewer verify your testing?
+
+## What gif best describes this PR or how it makes you feel?
+
+## Completion checklist
+
+- [ ] The pull request has been appropriately labeled according to
+  our [conventions](https://kruxdigital.jira.com/wiki/display/EN/Changes+and+Peer+Review)
+- [ ] The version of the package has been updated according to [Semantic Versioning](http://semver.org/)
+- [ ] The change has unit & integration tests as appropriate.
+- [ ] Documentation is up to date and correct.
+- [ ] Dependencies are correctly listed under `requirements.pip` and
+      are up to date without going over a major version.
+- [ ] Stakeholders have been notified. Workflow-impacting changes have
+      been appropriately socialized to avoid surprises.
