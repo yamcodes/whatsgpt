@@ -13,4 +13,4 @@
 - [ ] Documentation is up to date and correct.
 - [ ] Stakeholders have been notified. Workflow-impacting changes have
       been appropriately socialized to avoid surprises.
-- [ ] The task has been moved to "Code Review" on GitHub Projects.
+- [ ] The task has been moved to "Code Review" on *GitHub Projects*.
