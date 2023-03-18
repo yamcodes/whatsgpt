@@ -2,12 +2,7 @@ name: Auto approve
 
 on:
   pull_request_target:
-    types:
-      - opened
-      - synchronize
   issue_comment:
-    types:
-      - created
 
 jobs:
   auto-approve:
@@ -15,15 +10,12 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - name: Check for LGTM comment
-        if: github.event_name == 'issue_comment' && github.event.comment.body == 'LGTM' && github.event.comment.author_association == 'OWNER'
-        uses: actions/github-script@v5
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: LGTM Action
+        uses: docker://jonyhy/lgtm-action:v1
         with:
-          script: |
-            const prNumber = context.issue.number
-            const repo = context.repo
-            await github.rest.pulls.createReview({ ...repo, pull_number: prNumber, event: 'APPROVE' })
-
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Auto approve for Dependabot
         if: github.actor == 'dependabot[bot]' && github.event_name == 'pull_request_target'
         uses: hmarr/auto-approve-action@v3
