@@ -1,11 +1,9 @@
 ---
-
 name: 🐞 Bug report
 about: Report a bug in the project
 title: "The title of the bug you are reporting"
 labels: fix
-assignees: ''
-
+assignees: ""
 ---
 
 #### Describe the bug
