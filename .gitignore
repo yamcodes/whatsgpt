@@ -24,11 +24,6 @@ release
 *.sln
 *.sw?
 
-# lockfile
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
-
 # Environment variables
 .env
 .env.local
