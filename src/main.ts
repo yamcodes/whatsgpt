@@ -1,7 +1,7 @@
-import { createApp } from "vue";
-import "./style.css";
-import App from "./App.vue";
-import "./samples/node-api.ts";
+import { createApp } from 'vue';
+import './style.css';
+import App from './App.vue';
+import './samples/node-api.ts';
 
 // Create a new Vue application
 const app = createApp(App);
@@ -28,10 +28,10 @@ const app = createApp(App);
 // Mount the Vue app to the DOM
 const mountApp = () => {
   app
-    .mount("#app")
+    .mount('#app')
     // Remove the loading indicator when the app mounts
     .$nextTick(() => {
-      postMessage({ payload: "removeLoading" }, "*");
+      postMessage({ payload: 'removeLoading' }, '*');
     });
 };
 
