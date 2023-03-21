@@ -9,7 +9,6 @@ console.log(
 
 <template>
   <div class="scrollable">
-    I'm an app
     <a href="https://www.electronjs.org/" target="_blank">
       <img src="./assets/electron.svg" class="logo electron" alt="Electron logo" />
     </a>
@@ -24,6 +23,18 @@ console.log(
   <div class="flex-center">
     Place static files into the <code>/public</code> folder
     <img style="width: 5em" src="/node.svg" alt="Node logo" />
+  </div>
+  <!-- Example tailwind button -->
+  <button class="bg-primary hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    I'm a button!
+  </button>
+  <button class="btn ring-inset">Heyyo</button>
+  <div class="rating">
+    <input type="radio" name="rating-1" class="mask mask-star" />
+    <input type="radio" name="rating-1" class="mask mask-star" checked />
+    <input type="radio" name="rating-1" class="mask mask-star" />
+    <input type="radio" name="rating-1" class="mask mask-star" />
+    <input type="radio" name="rating-1" class="mask mask-star" />
   </div>
 </template>
 

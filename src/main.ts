@@ -1,7 +1,10 @@
 import { createApp } from 'vue';
-import './style.css';
+import './style.scss';
 import App from './App.vue';
 import './samples/node-api.ts';
+
+// Vite entries
+import 'virtual:windi.css';
 
 // Create a new Vue application
 const app = createApp(App);

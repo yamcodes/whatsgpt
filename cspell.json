@@ -3,8 +3,13 @@
     "ignorePaths": [],
     "dictionaryDefinitions": [],
     "words": [
-        "vite"
+        "vite",
+        "windi"
     ],
-    "ignoreWords": [],
+    "ignoreWords": [
+        "tailwindcss",
+        "windicss",
+        "daisyui"
+    ],
     "import": []
 }
