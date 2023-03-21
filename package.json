@@ -25,17 +25,18 @@
     "lint": "eslint --ext .js,.ts,.vue src"
   },
   "dependencies": {
-    "vue": "^3.2.47",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "dotenv": "^16.0.3",
     "vite": "^4.1.4",
     "vite-plugin-electron": "^0.11.1",
     "vite-plugin-electron-renderer": "^0.12.1",
-    "@vitejs/plugin-vue": "^4.0.0"
+    "vue": "^3.2.47"
   },
   "devDependencies": {
-    "electron": "^23.1.1",
-    "electron-builder": "^23.6.0",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
+    "electron": "^23.1.1",
+    "electron-builder": "^23.6.0",
     "eslint": "^8.36.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.27.5",
