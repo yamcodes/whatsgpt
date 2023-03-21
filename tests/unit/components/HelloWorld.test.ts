@@ -1,5 +1,5 @@
-import { render, fireEvent } from '@testing-library/vue';
-import { describe, it, expect } from 'vitest';
+import { fireEvent, render } from '@testing-library/vue';
+import { describe, expect, it } from 'vitest';
 import HelloWorld from '@/components/HelloWorld.vue';
 
 const countText = (count: number) => `count is ${count}`;
@@ -14,14 +14,18 @@ describe('HelloWorld.vue', () => {
   });
 
   it('should update the count when the button is clicked', async () => {
-    const { getByText } = render(HelloWorld);
+    const { getByText } = render(HelloWorld, {
+      props: { msg: 'Hello World' },
+    });
     const button = getByText(countText(0));
     await fireEvent.click(button);
     expect(button.textContent).toBe(countText(1));
   });
 
   it('should update the count when the button is clicked x100', async () => {
-    const { getByText } = render(HelloWorld);
+    const { getByText } = render(HelloWorld, {
+      props: { msg: 'Hello World' },
+    });
     const button = getByText(countText(0));
 
     await Promise.all(
