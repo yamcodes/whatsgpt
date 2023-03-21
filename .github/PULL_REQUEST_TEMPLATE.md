@@ -1,5 +1,3 @@
-
-
 <!--- Please fill in the answer to "What does this PR do?" above.
       If it closes an open issue, please write "Closes #<issue number>"
 

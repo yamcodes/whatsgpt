@@ -23,6 +23,24 @@
         "no-underscore-dangle": "off",
         "no-undef": "error",
         "import/no-unresolved": "off",
-        "vue/no-multiple-template-root": "off"
+        "vue/no-multiple-template-root": "off",
+        "import/no-extraneous-dependencies": [
+            "error",
+            {
+                "devDependencies": [
+                    "**/*.test.js",
+                    "**/*.spec.js",
+                    "**/*.test.ts",
+                    "**/*.spec.ts",
+                    "**/*.test.tsx",
+                    "**/*.spec.tsx",
+                    "**/*.test.vue",
+                    "**/*.spec.vue",
+                    "src/samples/**/*",
+                    "electron/**/*"
+                ]
+            }
+        ],
+        "curly": ["error", "multi"]
     }
 }

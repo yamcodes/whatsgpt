@@ -1,71 +1,41 @@
-# electron-vite-vue
+# 💬🧠 WhatsGPT
+WhatsApp client with autocomplete superpowers using ChatGPT.
 
-🥳 Really simple `Electron` + `Vue` + `Vite` boilerplate.
+## 🚀 Features 
+* Allows users to log in to their WhatsApp accounts.
+* Provides a user interface to view and send messages.
+* Integrates ChatGPT's auto-complete feature to suggest possible responses to messages.
+* Customizable settings for auto-complete feature.
 
-<!-- [![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite) -->
-<!-- [![Netlify Status](https://api.netlify.com/api/v1/badges/ae3863e3-1aec-4eb1-8f9f-1890af56929d/deploy-status)](https://app.netlify.com/sites/electron-vite/deploys) -->
-<!-- [![GitHub license](https://img.shields.io/github/license/caoxiemeihao/electron-vite-vue)](https://github.com/electron-vite/electron-vite-vue/blob/main/LICENSE) -->
-<!-- [![GitHub stars](https://img.shields.io/github/stars/caoxiemeihao/electron-vite-vue?color=fa6470)](https://github.com/electron-vite/electron-vite-vue) -->
-<!-- [![GitHub forks](https://img.shields.io/github/forks/caoxiemeihao/electron-vite-vue)](https://github.com/electron-vite/electron-vite-vue) -->
-[![GitHub Build](https://github.com/electron-vite/electron-vite-vue/actions/workflows/build.yml/badge.svg)](https://github.com/electron-vite/electron-vite-vue/actions/workflows/build.yml)
-[![GitHub Discord](https://img.shields.io/badge/chat-discord-blue?logo=discord)](https://discord.gg/sRqjYpEAUK)
+## 🛠️ Getting Started
+To get started with WhatsGPT, follow these steps:
 
-## Features
+1. Clone the repository:
+```bash
+git clone https://github.com/yamyam263/whatsgpt.git
 
-📦 Out of the box  
-🎯 Based on the official [template-vue-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-vue-ts), less invasive  
-🌱 Extensible, really simple directory structure  
-💪 Support using Node.js API in Electron-Renderer  
-🔩 Support C/C++ native addons  
-🖥 It's easy to implement multiple windows  
-
-## Quick Start
-
-```sh
-npm create electron-vite
 ```
-
-<!-- [![quick-start](https://asciinema.org/a/483731.svg)](https://asciinema.org/a/483731) -->
-
-![electron-vite-vue.gif](/public/electron-vite-vue.gif)
-
-## Debug
-
-![electron-vite-react-debug.gif](https://github.com/electron-vite/electron-vite-react/blob/main/public/electron-vite-react-debug.gif?raw=true)
-
-## Directory
-
-```diff
-+ ├─┬ electron
-+ │ ├─┬ main
-+ │ │ └── index.ts    entry of Electron-Main
-+ │ └─┬ preload
-+ │   └── index.ts    entry of Preload-Scripts
-  ├─┬ src
-  │ └── main.ts       entry of Electron-Renderer
-  ├── index.html
-  ├── package.json
-  └── vite.config.ts
+2. Install dependencies:
+```bash
+cd whatsgpt
+yarn
 ```
-
-## Be aware
-
-🚨 By default, this template integrates Node.js in the Renderer process. If you don't need it, you just remove the option below. [Because it will modify the default config of Vite](https://github.com/electron-vite/vite-plugin-electron-renderer#config-presets-opinionated).
-
-```diff
-# vite.config.ts
-
-export default {
-  plugins: [
--   // Use Node.js API in the Renderer-process
--   renderer({
--     nodeIntegration: true,
--   }),
-  ],
-}
+3. Launch the application:
+```bash
+yarn start
 ```
+## 💻 Usage
+Upon starting WhatsGPT, you will be prompted to log in to your WhatsApp account. Once logged in, you will see a list of your chats. Clicking on a chat will display the messages in that chat. To send a message, simply type it into the input box at the bottom of the screen and press Enter.
 
-## FAQ
+The auto-complete feature can be enabled or disabled in the settings menu. When enabled, the feature will suggest possible responses to messages as you type.
 
-- [dependencies vs devDependencies](https://github.com/electron-vite/vite-plugin-electron-renderer#dependencies-vs-devdependencies)
-- [C/C++ addons, Node.js modules - Pre-Bundling](https://github.com/electron-vite/vite-plugin-electron-renderer#dependency-pre-bundling)
+## 🤝 Contributing
+We welcome contributions to WhatsGPT! To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes.
+4. Test your changes.
+5. Submit a pull request.
+## 📄 License
+WhatsGPT is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
