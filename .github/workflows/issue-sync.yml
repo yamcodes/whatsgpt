@@ -1,0 +1,22 @@
+name: Project Issue State Sync
+
+on:
+  # Run this workflow every 2 hours
+  schedule:
+    - cron: "0 */2 * * *"
+  # Add a manual trigger
+  workflow_dispatch:
+
+jobs:
+  issue-state-sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Sync issue states
+        uses: dasmerlon/project-issue-state-sync@v1.0.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: yamyam263
+          project_number: 3
+          closed_stati: DONE
+          open_stati: TODO,DOING,CODE REVIEW

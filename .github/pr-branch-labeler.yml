@@ -1,0 +1,10 @@
+feat: ["feat/*", "feature/*"]
+fix: ["bugfix/*", "hotfix/*", "bug/*", "fix/*"]
+design: ["design/*", "ui/*", "ux/*"]
+docs: ["docs/*", "doc/*"]
+test: ["test/*", "tests/*"]
+perf: ["perf/*", "performance/*"]
+refactor: "refactor/*"
+chore :hammer:: "chore/*"
+ci: "ci/*"
+project management: ["project-management/*", "project/*"]

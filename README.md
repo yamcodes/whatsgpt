@@ -13,6 +13,7 @@ To get started with WhatsGPT, follow these steps:
 1. Clone the repository:
 ```bash
 git clone https://github.com/yamyam263/whatsgpt.git
+
 ```
 2. Install dependencies:
 ```bash

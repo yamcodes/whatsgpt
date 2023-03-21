@@ -1,12 +1,17 @@
-<!-- Thank you for contributing! -->
+<!--- Please fill in the answer to "What does this PR do?" above.
+      If it closes an open issue, please write "Closes #<issue number>"
 
-### Description
+## Why is this change being made?
 
-<!-- Please insert your description here and provide especially info about the "what" this PR is solving -->
+## How was this tested? How can the reviewer verify your testing?
 
-### What is the purpose of this pull request? <!-- (put an "X" next to an item) -->
+## Completion checklist
 
-- [ ] Bug fix
-- [ ] New Feature
-- [ ] Documentation update
-- [ ] Other
+- [ ] The branch name this PR is based on, is in the format of
+      `<username>/<type>/<some-description>`.  E.g. `john/feature/my-new-feature`
+- [ ] Optional, but recommended: the title of this PR is in the format of `<Some Description>`.  E.g. `My New Feature`
+- [ ] The change has unit & integration tests as appropriate.
+- [ ] Documentation is up to date and correct.
+- [ ] Stakeholders have been notified. Workflow-impacting changes have
+      been appropriately socialized to avoid surprises.
+- [ ] The task has been moved to "Code Review" on *GitHub Projects*.
