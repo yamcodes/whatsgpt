@@ -2,9 +2,15 @@
 
 name: Test
 
+# Trigger testing on every PR to development and merge to main
 on:
+  pull_request:
+    branches:
+      - development
+      - main
   push:
     branches:
+      - development
       - main
 
 jobs:
