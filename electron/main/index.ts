@@ -1,6 +1,4 @@
-import {
-  app, BrowserWindow, shell, ipcMain,
-} from 'electron';
+import { app, BrowserWindow, shell, ipcMain } from 'electron';
 import { release } from 'node:os';
 import { join } from 'node:path';
 import dotenv from 'dotenv';
@@ -60,6 +58,8 @@ async function createWindow() {
     },
     minWidth: 800,
     minHeight: 600,
+    titleBarStyle: "hiddenInset",
+    trafficLightPosition: { x: 14, y: 25 },
   });
 
   if (process.env.VITE_DEV_SERVER_URL) {
@@ -113,6 +113,7 @@ ipcMain.handle('open-win', (_, arg) => {
     },
   });
 
-  if (process.env.VITE_DEV_SERVER_URL) childWindow.loadURL(`${devServerUrl}#${arg}`);
+  if (process.env.VITE_DEV_SERVER_URL)
+    childWindow.loadURL(`${devServerUrl}#${arg}`);
   else childWindow.loadFile(indexHtml, { hash: arg });
 });

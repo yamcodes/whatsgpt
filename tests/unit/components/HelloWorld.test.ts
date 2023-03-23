@@ -1,12 +1,11 @@
 import { fireEvent, render } from '@testing-library/vue';
-import {
-  beforeEach, describe, expect, it,
-} from 'vitest';
-import HelloWorld from '@/components/HelloWorld.vue';
+import { beforeEach, describe, expect, it } from 'vitest';
+import HelloWorld from '@components/HelloWorld.vue';
 
 const countText = (count: number) => `count is ${count}`;
 const defaultMsg = 'Hello World';
-const renderHelloWorld = (msg = defaultMsg) => render(HelloWorld, { props: { msg } });
+const renderHelloWorld = (msg = defaultMsg) =>
+  render(HelloWorld, { props: { msg } });
 
 // HelloWorld Factory
 const createHelloWorld = (msg = defaultMsg) => {
@@ -37,7 +36,7 @@ describe('HelloWorld.vue', () => {
   it('should update the count when the button is clicked x100', async () => {
     const button = getByCountText(0);
     await Promise.all(
-      Array.from({ length: 100 }).map(() => fireEvent.click(button)),
+      Array.from({ length: 100 }).map(() => fireEvent.click(button))
     );
 
     expect(button.textContent).toBe(countText(100));

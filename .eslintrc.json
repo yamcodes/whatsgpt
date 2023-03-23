@@ -1,30 +1,26 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "node": true
-    },
-    "extends": [
-        "plugin:vue/essential",
-        "airbnb-base"
-    ],
-    "parserOptions": {
-        "ecmaVersion": "latest",
-        "parser": "@typescript-eslint/parser",
-        "sourceType": "module"
-    },
-    "plugins": [
-        "vue",
-        "@typescript-eslint"
-    ],
-    "ignorePatterns": ["dist", "dist-*"],
-    "rules": {
-        "no-unused-vars": "off",
-        "no-underscore-dangle": "off",
-        "no-undef": "error",
-        "import/no-unresolved": "off",
-        "vue/no-multiple-template-root": "off",
-        "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-        "curly": ["error", "multi"]
-    }
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["plugin:vue/essential", "airbnb-base", "prettier"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "parser": "@typescript-eslint/parser",
+    "sourceType": "module"
+  },
+  "plugins": ["vue", "@typescript-eslint"],
+  "ignorePatterns": ["dist", "dist-*"],
+  "rules": {
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "no-undef": "error",
+    "import/no-unresolved": "off",
+    "vue/no-multiple-template-root": "off",
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "curly": ["error", "multi"],
+    "vue/multi-word-component-names": "off",
+    "import/extensions": "off"
+  }
 }

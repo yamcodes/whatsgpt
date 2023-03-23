@@ -1,5 +1,4 @@
 /* eslint-disable global-require */
-/* windi.config.ts */
 
 import { defineConfig } from 'windicss/helpers';
 import colors from 'windicss/colors';
@@ -11,7 +10,7 @@ const theme = {
       primary: colors.blue,
       secondary: colors.gray,
       accent: colors.pink,
-      neutral: colors.coolGray,
+      neutral: colors.gray,
     },
   },
 };
@@ -27,4 +26,5 @@ export default defineConfig({
     // see: https://windicss.org/plugins/typography.html
     require('daisyui'),
   ],
+  safelist: 'tooltip-left tooltip-right tooltip-top tooltip-bottom',
 });

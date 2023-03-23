@@ -3,7 +3,7 @@ name: Project Issue State Sync
 on:
   # Run this workflow every 2 hours
   schedule:
-    - cron: "0 */2 * * *"
+    - cron: '0 */2 * * *'
   # Add a manual trigger
   workflow_dispatch:
 
