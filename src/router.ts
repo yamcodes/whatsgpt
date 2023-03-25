@@ -1,7 +1,5 @@
-import Home from '@views/Home.vue';
-import Chat from '@views/Chat.vue';
-import Settings from '@views/Settings.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
+import { Home, Chat, Settings, Error } from '@/views';
 
 const routes = [
   {
@@ -20,7 +18,12 @@ const routes = [
     component: Settings,
     name: 'Settings',
   },
-
+  // catch-all redirect to 404
+  {
+    path: '/:pathMatch(.*)*',
+    component: Error,
+    name: 'error',
+  },
 ];
 
 const router = createRouter({
