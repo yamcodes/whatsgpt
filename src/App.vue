@@ -1,55 +1,46 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue';
-
-console.log(
-  '[App.vue]',
-  `Hello world from Electron ${process.versions.electron}!`,
-);
-</script>
-
 <template>
-  <div class="scrollable">
-    I'm an app
-    <a href="https://www.electronjs.org/" target="_blank">
-      <img src="./assets/electron.svg" class="logo electron" alt="Electron logo" />
-    </a>
-    <a href="https://vitejs.dev/" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="navbar bg-base-200 sticky top-0 z-10" v-if="$route.path !== '/'">
+    <a class="ml-18 text-l">{{ title }}</a>
   </div>
-  <HelloWorld msg="Electron + Vite + Vue" />
-  <div class="flex-center">
-    Place static files into the <code>/public</code> folder
-    <img style="width: 5em" src="/node.svg" alt="Node logo" />
-  </div>
+  <ul class="menu" v-if="$route.path !== '/'">
+    <li>
+      <router-link to="/">Home</router-link>
+    </li>
+    <li>
+      <router-link to="/chat">Chat</router-link>
+    </li>
+    <li>
+      <router-link to="/settings">Settings</router-link>
+    </li>
+  </ul>
+  <router-view />
 </template>
+<script lang="ts" setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
 
+const title = computed(() => {
+  const route = useRoute();
+  const { path, name } = route;
+  if (path === '/') return '';
+  return name;
+});
+</script>
 <style>
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.navbar {
+  -webkit-app-region: drag;
+}
+.btn {
+  -webkit-app-region: no-drag;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* Fade out transition */
+.fade-out-enter-active,
+.fade-out-leave-active {
+  transition: opacity 0.5s;
 }
-
-.logo.electron:hover {
-  filter: drop-shadow(0 0 2em #9feaf9);
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.fade-out-enter,
+.fade-out-leave-to {
+  opacity: 0;
 }
 </style>

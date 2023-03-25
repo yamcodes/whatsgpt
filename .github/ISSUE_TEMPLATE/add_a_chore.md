@@ -1,9 +1,9 @@
 ---
 name: 🧹 Chore request
 about: Suggest a chore for this project
-title: "The title of the chore you are suggesting"
+title: 'The title of the chore you are suggesting'
 labels: chore
-assignees: ""
+assignees: ''
 ---
 
 #### What is the chore you are suggesting?

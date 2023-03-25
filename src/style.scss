@@ -1,0 +1,39 @@
+  // /* Show scrollbar on hover using webkit pseudo class */
+
+  // body::-webkit-scrollbar {
+  //   width: 8px;
+  //   height: 8px;
+  // }
+
+  // body:hover::-webkit-scrollbar {
+  //   width: 8px;
+  //   height: 8px;
+  //   opacity: 0;
+  // }
+
+  // body::-webkit-scrollbar-thumb {
+  //   border-radius: 8px;
+  // }
+
+  // body:hover::-webkit-scrollbar-thumb {
+  //   /* Chrome style */
+  //   background-color: rgba(255, 255, 255, 0.3);
+  // }
+
+  // body::-webkit-scrollbar-thumb:hover {
+  //   /* Chrome style */
+  //   background-color: rgba(255, 255, 255, 0.4);
+  // }
+
+  // body::-webkit-scrollbar-thumb:active {
+  //   /* Chrome style */
+  //   background-color: rgba(255, 255, 255, 0.5);
+  // }
+
+button:focus {
+  outline: none;
+}
+
+button:focus-visible {
+  outline: 2px solid #646cff !important;
+}

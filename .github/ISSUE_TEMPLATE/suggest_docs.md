@@ -1,9 +1,9 @@
 ---
 name: 📚 Documentation request
 about: Suggest a documentation change for this project
-title: "The title of the documentation you are suggesting"
+title: 'The title of the documentation you are suggesting'
 labels: docs
-assignees: ""
+assignees: ''
 ---
 
 #### What is the documentation you are suggesting?

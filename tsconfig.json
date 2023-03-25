@@ -13,13 +13,26 @@
     "skipLibCheck": true,
     "noEmit": true,
     "baseUrl": ".",
+    "allowJs": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@tests/*": ["tests/*"],
+      "@components/*": ["src/components/*"],
+      "@components": ["src/components"],
+      "@views/*": ["src/views/*"],
+      "@assets/*": ["src/assets/*"],
+      "@router/*": ["src/router/*"],
+      "@samples/*": ["src/samples/*"],
+      "@types/*": ["src/types/*"],
+      "@types": ["src/types"],
+      "@utils/*": ["src/utils/*"],
+      "@utils": ["src/utils"],
     }
-    
   },
   "include": ["src", "tests"],
   "references": [
-    { "path": "./tsconfig.node.json" }
+    {
+      "path": "./tsconfig.node.json"
+    }
   ]
 }

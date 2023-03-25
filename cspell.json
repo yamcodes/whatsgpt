@@ -1,10 +1,18 @@
 {
-    "version": "0.2",
-    "ignorePaths": [],
-    "dictionaryDefinitions": [],
-    "words": [
-        "vite"
-    ],
-    "ignoreWords": [],
-    "import": []
+  "version": "0.2",
+  "language": "en",
+  "dictionaryDefinitions": [],
+  "words": [
+    "vite",
+    "whatsgpt",
+    "windi"
+  ],
+  "ignoreWords": [
+    "tailwindcss",
+    "windicss",
+    "daisyui",
+    "heroicons",
+    "ACTIVECLASS"
+  ],
+  "import": []
 }
