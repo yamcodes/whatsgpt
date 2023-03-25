@@ -21,6 +21,7 @@
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "curly": ["error", "multi"],
     "vue/multi-word-component-names": "off",
-    "import/extensions": "off"
+    "import/extensions": "off",
+    "eol-last": ["error", "always"]
   }
 }
