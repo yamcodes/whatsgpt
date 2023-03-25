@@ -4894,10 +4894,10 @@ vite-node@0.29.7:
     picocolors "^1.0.0"
     vite "^3.0.0 || ^4.0.0"
 
-vite-plugin-electron-renderer@^0.12.1:
-  version "0.12.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-electron-renderer/-/vite-plugin-electron-renderer-0.12.1.tgz#0f70ad159d6cbb6f2c2173824a57a1dbda040b2d"
-  integrity sha512-n0w8vrQFafaY1tmIPIQAck4zLanGLYcthvGttH00KRJg47Sjh2mp5Hb8VJ3l8FmpnYTobnl949+N4sunTR1WBA==
+vite-plugin-electron-renderer@^0.13.7:
+  version "0.13.7"
+  resolved "https://registry.yarnpkg.com/vite-plugin-electron-renderer/-/vite-plugin-electron-renderer-0.13.7.tgz#ac00345bd4a1e8e657c43d99da5c9d5837083c52"
+  integrity sha512-/Eo2td8VgqukbOfw/buZBlGdOrwC+htKLghFInDHiwMVNaRRPMN4kYBJeEcHxbeLlHkQ/wkxBUU8sScuUbIxXg==
   dependencies:
     lib-esm "~0.3.0"
 
