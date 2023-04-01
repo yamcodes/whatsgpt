@@ -65,7 +65,7 @@
     "sass": "^1.59.3",
     "tailwindcss": "^3.2.7",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.2",
+    "typescript": "^5.0.3",
     "vite-plugin-windicss": "^1.8.10",
     "vite-tsconfig-paths": "^4.0.7",
     "vitest": "^0.29.2",
