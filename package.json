@@ -48,7 +48,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "@typescript-eslint/parser": "^5.56.0",
-    "@vitest/ui": "^0.29.2",
+    "@vitest/ui": "^0.29.8",
     "@vue/devtools": "^6.0.0-beta.21",
     "autoprefixer": "^10.4.14",
     "electron": "^23.2.0",
