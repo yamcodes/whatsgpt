@@ -69,7 +69,7 @@ To contribute, please follow these steps:
 4. Test your changes.
 5. Submit a pull request.
 
-For your convenience, we have set up a pre-commit hook that uses `commit-gpt` to generate a commit message using ChatGPT. To use this hook and any other hooks in the `.githooks` directory, run the following command:
+For your convenience, we have set up a pre-commit hook that uses [commit-gpt](https://github.com/markuswt/gpt-commit) to generate a commit message using ChatGPT. To use this hook and any other hooks in the `.githooks` directory, run the following command:
 
 ```bash
 yarn hooks
