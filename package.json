@@ -30,7 +30,8 @@
     "devtools": "./node_modules/.bin/vue-devtools",
     "generate:index": "ts-node -P tsconfig.script.json scripts/generateComponentIndex.ts",
     "prettier": "prettier --write .",
-    "check:prettier": "prettier --check ."
+    "check:prettier": "prettier --check .",
+    "hooks": "git config --local core.hooksPath .githooks"
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.16",
