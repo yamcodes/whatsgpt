@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# If there is non-empty message, just use it as-is.
+if [ -n "$2" ]; then
+    exit
+fi
+
+FRIENDLY_ENV_ALERT="# Did you know?\n#   In this repository, you can use ChatGPT to generate commit messages.
+#   Add an OPENAI_API_KEY to your .env file to enable this feature.
+#   Get your API key here: https://platform.openai.com/account/api-keys\n#"
+
+# run the ./.git/hooks/gpt-commit.py --print-message script to get the commit message. if there are any problems, recommend the user to add a OPENAI_API_KEY to .env
+CHAT_GPT_COMMIT_MSG=`python ./.git/hooks/gpt-commit.py --print-message`
+if [ $? -ne 0 ]; then
+    echo -e "$FRIENDLY_ENV_ALERT" >> $1
+    exit
+fi
+# write the commit message to the commit message file
+echo "$CHAT_GPT_COMMIT_MSG" > $1
