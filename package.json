@@ -1,9 +1,9 @@
 {
-  "name": "electron-vue-vite",
-  "version": "2.0.0",
+  "name": "whatsgpt",
+  "version": "1.0.0",
   "main": "dist-electron/main/index.js",
-  "description": "Really simple Electron + Vue + Vite boilerplate.",
-  "author": "草鞋没号 <308487730@qq.com>",
+  "description": "WhatsApp client for desktop, built with Electron, Vue 3, Vite, and Tailwind CSS.",
+  "author": "yamyam263",
   "license": "MIT",
   "private": true,
   "keywords": [
@@ -43,7 +43,8 @@
     "vite-plugin-electron": "^0.11.1",
     "vite-plugin-electron-renderer": "^0.13.7",
     "vue": "^3.2.47",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.13",
+    "whatsapp-web.js": "^1.19.5"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.56.0",
@@ -59,6 +60,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-vue": "^9.10.0",
     "happy-dom": "^8.9.0",
+    "patch-package": "^6.5.1",
     "postcss": "^8.4.21",
     "prettier": "2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.5",
