@@ -34,7 +34,7 @@
     "hooks": "git config --local core.hooksPath .githooks"
   },
   "dependencies": {
-    "@heroicons/vue": "^2.0.16",
+    "@heroicons/vue": "^2.0.17",
     "@testing-library/vue": "^7.0.0",
     "@vitejs/plugin-vue": "^4.1.0",
     "daisyui": "^2.51.5",
